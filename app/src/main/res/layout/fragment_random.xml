@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragment.RandomKural"
+    android:orientation="vertical">
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/shimmerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_marginTop="10dp">
+        <include layout="@layout/kural_placeholder"/>
+    </com.facebook.shimmer.ShimmerFrameLayout>
+    <LinearLayout
+        android:id="@+id/kural_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="visible">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="10dp">
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/back_btn"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="15dp"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true">
+            <TextView
+                style="@style/title_for_page"
+                android:text="குறள் - "
+                android:layout_marginTop="0dp"
+                android:textSize="20sp"/>
+            <TextView
+                style="@style/title_for_page"
+                android:id="@+id/kural_number"
+                android:layout_marginTop="0dp"
+                android:text="1330"
+                android:textSize="20sp"/>
+            </LinearLayout>
+            <CheckBox
+                android:id="@+id/translate"
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                android:text="Eng"
+                android:button="@null"
+                android:background="@drawable/lang_back"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="15dp"
+                android:gravity="center"
+                android:fontFamily="@font/meera"
+                android:textColor="@color/black"
+                android:textSize="14sp"/>
+        </RelativeLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="பால் - "
+                style="@style/kural_cats" />
+            <TextView
+                android:id="@+id/paal"
+                style="@style/kural_cats"
+                android:layout_marginStart="0dp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="இயல் - "
+                style="@style/kural_cats"/>
+            <TextView
+                android:id="@+id/iyal"
+                style="@style/kural_cats"
+                android:layout_marginStart="0dp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="அதிகாரம் - "
+                style="@style/kural_cats" />
+            <TextView
+                android:id="@+id/athigaram"
+                style="@style/kural_cats"
+                android:layout_marginStart="0dp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="குறள்"
+                style="@style/kural_cats"
+                android:textColor="@color/black"
+                android:textSize="18sp"/>
+<!--            <ImageView-->
+<!--                android:id="@+id/speak"-->
+<!--                android:layout_width="30dp"-->
+<!--                android:layout_height="30dp"-->
+<!--                android:src="@drawable/volume_up"-->
+<!--                android:layout_gravity="center"-->
+<!--                android:layout_marginStart="10dp"/>-->
+        </LinearLayout>
+        <TextView
+            android:id="@+id/kural"
+            android:text="அகர முதல எழுத்தெல்லாம் ஆதி\n
+பகவன் முதற்றே உலகு"
+            style="@style/kural_cats"
+            android:layout_marginHorizontal="25dp"
+            android:textSize="16sp"
+            android:lineHeight="24sp"/>
+        <TextView
+            android:text="பொருள்"
+            style="@style/kural_cats"
+            android:textColor="@color/black"
+            android:textSize="18sp"/>
+        <TextView
+            android:id="@+id/meaning"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            style="@style/kural_cats"
+            android:layout_marginHorizontal="25dp"
+            android:textSize="16sp"
+            android:text="அகர எழுத்துகளுக்கு முதன்மை,
+ஆதிபகவன், உலகில் வாழும்
+உயிர்களுக்கு முதன்மை."
+            android:lineHeight="24sp"/>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/addToFav"
+            android:drawableTop="@drawable/heart_small"
+            android:text="Add to favourites"
+            style="@style/buttons_in_kural"
+            app:cardElevation="0dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:background="@drawable/btn_background">
+                <ImageView
+                    android:id="@+id/fav_icon"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/heart_small"/>
+                <TextView
+                    android:id="@+id/fav_card_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Add to favourites"
+                    style="@style/buttons_in_kural"
+                    android:padding="0dp"
+                    android:layout_margin="0dp"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+        <Button
+            android:id="@+id/randombtn"
+            android:drawableTop="@drawable/random_small"
+            android:text="Random"
+            style="@style/buttons_in_kural" />
+        <Button
+            android:id="@+id/sharebtn"
+            android:drawableTop="@drawable/share"
+            android:text="Share"
+            style="@style/buttons_in_kural" />
+    </LinearLayout>
+</LinearLayout>

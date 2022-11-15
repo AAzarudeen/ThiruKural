@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".fragment.ValluvarInformation">
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/back_btn"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="15dp"/>
+        <TextView
+            android:text="திருவள்ளுவர்"
+            style="@style/title_for_page" 
+            android:layout_centerInParent="true"/>
+    </RelativeLayout>
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="35dp"
+        app:cardCornerRadius="100dp">
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            android:src="@drawable/vallu_info"/>
+    </androidx.cardview.widget.CardView>
+    <TextView
+        android:id="@+id/valluvar_info"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="@string/valluvar_info"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginBottom="20dp"
+        android:textColor="@color/text_color"
+        android:fontFamily="@font/meera"
+        android:textSize="12sp"
+        android:lineSpacingExtra="5sp"
+        android:scrollbars="none" />
+</LinearLayout>

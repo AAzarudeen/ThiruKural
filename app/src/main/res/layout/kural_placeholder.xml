@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp">
+
+
+        <TextView
+            style="@style/title_for_page"
+            android:layout_width="60dp"
+            android:background="#B3B3B3"
+            android:layout_marginTop="0dp"
+            android:textSize="20sp"
+            android:layout_centerHorizontal="true"/>
+
+    </RelativeLayout>
+    <TextView
+        style="@style/kural_cats"
+        android:layout_width="160dp"
+        android:layout_height="30dp"
+        android:background="#B3B3B3" />
+    <TextView
+        style="@style/kural_cats"
+        android:layout_width="150dp"
+        android:layout_height="30dp"
+        android:background="#B3B3B3" />
+    <TextView
+        style="@style/kural_cats"
+        android:layout_width="230dp"
+        android:layout_height="30dp"
+        android:background="#B3B3B3" />
+    <TextView
+        style="@style/kural_cats"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:layout_width="60dp"
+        android:layout_height="30dp"
+        android:background="#B3B3B3" />
+    <TextView
+        style="@style/kural_cats"
+        android:layout_marginStart="45dp"
+        android:layout_width="280dp"
+        android:layout_height="50dp"
+        android:background="#B3B3B3" />
+    <TextView
+        style="@style/kural_cats"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:layout_width="80dp"
+        android:layout_height="30dp"
+        android:background="#B3B3B3" />
+    <TextView
+        android:layout_width="300dp"
+        android:layout_height="120dp"
+        style="@style/kural_cats"
+        android:layout_marginStart="45dp"
+        android:background="#B3B3B3" />
+    <Button
+        android:id="@+id/fav"
+        style="@style/buttons_in_kural"
+        android:backgroundTint="#B3B3B3"/>
+    <Button
+        android:id="@+id/random"
+        style="@style/buttons_in_kural"
+        android:backgroundTint="#B3B3B3"/>
+    <Button
+        android:id="@+id/share"
+        style="@style/buttons_in_kural"
+        android:backgroundTint="#B3B3B3"/>
+</LinearLayout>
